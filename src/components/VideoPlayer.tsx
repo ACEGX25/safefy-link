@@ -56,7 +56,7 @@ const VideoPlayer = ({ videoUrl, capturedAt, duration, isUploading, uploadFailed
 
       {/* Video Container - 9:16 aspect ratio for mobile burst video */}
       <div className="relative bg-secondary flex items-center justify-center p-4">
-        <div className="relative w-full max-w-[280px] aspect-[9/16] rounded-lg overflow-hidden bg-background/50 border border-border">
+        <div className="relative w-full max-w-[200px] sm:max-w-[280px] aspect-[9/16] rounded-lg overflow-hidden bg-background/50 border border-border">
           {isUploading ? (
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
               <div className="w-12 h-12 rounded-full border-2 border-accent border-t-transparent animate-spin" />

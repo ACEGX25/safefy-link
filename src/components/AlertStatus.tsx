@@ -37,7 +37,7 @@ const AlertStatus = ({ personName, phoneNumber, threatLevel, message }: AlertSta
   const styles = getThreatStyles();
 
   return (
-    <div className="glass-card rounded-xl p-4 md:p-6 card-shadow animate-slide-up">
+    <div className="glass-card rounded-xl p-3 sm:p-4 md:p-6 card-shadow animate-slide-up">
       {/* Threat Banner */}
       <div className={`flex items-center gap-3 px-4 py-3 rounded-lg ${styles.bg} ${styles.border} border mb-4`}>
         <AlertTriangle className={`w-5 h-5 ${styles.text}`} />

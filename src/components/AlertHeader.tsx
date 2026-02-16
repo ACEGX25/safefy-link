@@ -18,7 +18,7 @@ const AlertHeader = ({ personName, alertTime, isLive }: AlertHeaderProps) => {
   };
 
   return (
-    <header className="w-full py-4 px-4 md:px-6 emergency-gradient">
+    <header className="w-full py-3 px-3 sm:py-4 sm:px-4 md:px-6 emergency-gradient">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         {/* Logo & Brand */}
         <div className="flex items-center gap-3">

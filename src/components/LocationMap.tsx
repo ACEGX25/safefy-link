@@ -48,7 +48,7 @@ const LocationMap = ({ latitude, longitude, lastUpdated, isLive }: LocationMapPr
       </div>
 
       {/* Map Embed */}
-      <div className="relative aspect-video md:aspect-[21/9] bg-secondary">
+      <div className="relative aspect-[4/3] sm:aspect-video md:aspect-[21/9] bg-secondary">
         <iframe
           src={embedUrl}
           className="w-full h-full"
