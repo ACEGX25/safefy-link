@@ -1,6 +1,7 @@
 import AlertHeader from "@/components/AlertHeader";
 import AlertStatus from "@/components/AlertStatus";
 import LocationMap from "@/components/LocationMap";
+import ClipQueue, { Clip } from "@/components/ClipQueue";
 import VideoPlayer from "@/components/VideoPlayer";
 import TimelineEvent, { TimelineItem } from "@/components/TimelineEvent";
 
@@ -64,6 +65,13 @@ const mockTimelineEvents: TimelineItem[] = [
   },
 ];
 
+const mockClips: Clip[] = [
+  { id: "1", timestamp: new Date(Date.now() - 4.5 * 60 * 1000), seen: true, status: "uploaded" },
+  { id: "2", timestamp: new Date(Date.now() - 3.5 * 60 * 1000), seen: true, status: "uploaded" },
+  { id: "3", timestamp: new Date(Date.now() - 2.5 * 60 * 1000), seen: false, status: "uploaded" },
+  { id: "4", timestamp: new Date(Date.now() - 2 * 60 * 1000), seen: false, status: "failed" },
+  { id: "5", timestamp: new Date(Date.now() - 60 * 1000), seen: false, status: "uploading" },
+];
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -92,6 +100,11 @@ const Index = () => {
               lastUpdated={mockAlertData.location.lastUpdated}
               isLive={mockAlertData.isLive}
             />
+          </div>
+
+          {/* Clip Queue - below map on mobile, below map on desktop */}
+          <div className="lg:col-span-2">
+            <ClipQueue clips={mockClips} />
           </div>
 
           {/* Video Player - Single column */}
