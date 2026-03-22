@@ -1,6 +1,7 @@
 import AlertHeader from "@/components/AlertHeader";
 import AlertStatus from "@/components/AlertStatus";
 import LocationMap from "@/components/LocationMap";
+import ClipQueue, { Clip } from "@/components/ClipQueue";
 import VideoPlayer from "@/components/VideoPlayer";
 import TimelineEvent, { TimelineItem } from "@/components/TimelineEvent";
 
