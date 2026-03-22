@@ -102,6 +102,11 @@ const Index = () => {
             />
           </div>
 
+          {/* Clip Queue - below map on mobile, below map on desktop */}
+          <div className="lg:col-span-2">
+            <ClipQueue clips={mockClips} />
+          </div>
+
           {/* Video Player - Single column */}
           <div className="lg:col-span-1">
             <VideoPlayer 
